@@ -223,6 +223,22 @@ $(function() {
     
   });
   bar.animate(.80);
+  var bar = new ProgressBar.Line(lineprog355, {
+    strokeWidth: 1.72,
+    easing: 'easeInOut',
+    duration: 1400,
+    delay: 3000,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + ' %');
+    }
+    
+  });
+  bar.animate(.73);
 
   var bar = new ProgressBar.Line(lineprog4, {
     strokeWidth: 1.72,
